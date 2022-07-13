@@ -34,3 +34,8 @@ const user = {
 console.log(user);
 console.log(user.name);
 // user.job = "programadora";
+// any (evitar usar)
+let a = 0;
+a = "teste";
+a = true;
+a = [];

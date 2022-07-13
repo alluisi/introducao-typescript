@@ -38,3 +38,9 @@ const user: {name: string, age: number} = {
 console.log(user);
 console.log(user.name);
 // user.job = "programadora";
+
+// any (evitar usar)
+let a: any = 0;
+a = "teste";
+a = true;
+a = [];
