@@ -29,3 +29,12 @@ console.log(myNumbers);
 let myTuple: [number, string, string[]];
 myTuple = [5, "teste", ["a", "b"]];
 // myTuple = [true, false, true};
+
+// object literals -> {prop: value}
+const user: {name: string, age: number} = {
+    name: "Alessandra",
+    age: 42
+};
+console.log(user);
+console.log(user.name);
+// user.job = "programadora";
