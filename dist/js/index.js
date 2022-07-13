@@ -8,3 +8,10 @@ console.log(x);
 let y = 12; // inferência
 // y = "teste";
 let z = 12; // anotation
+// tipos básicos
+let firtName = "Alessandra";
+let age = 42;
+const isAdmin = true;
+// String != string (usar minúscula)
+console.log(typeof firtName);
+firtName = "Aline";
