@@ -39,3 +39,8 @@ let a = 0;
 a = "teste";
 a = true;
 a = [];
+// union type
+let id = "10";
+id = 200;
+// id = true;
+// id = [];
