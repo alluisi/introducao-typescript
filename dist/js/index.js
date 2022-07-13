@@ -15,3 +15,10 @@ const isAdmin = true;
 // String != string (usar minúscula)
 console.log(typeof firtName);
 firtName = "Aline";
+// object
+const myNumbers = [1, 2, 3];
+console.log(myNumbers.length);
+// console.log(myNumbers.toUpperCase());
+console.log(firtName.toUpperCase());
+myNumbers.push(4);
+console.log(myNumbers);
