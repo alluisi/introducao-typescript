@@ -22,3 +22,7 @@ console.log(myNumbers.length);
 console.log(firtName.toUpperCase());
 myNumbers.push(4);
 console.log(myNumbers);
+// tuplas -> tuple
+let myTuple;
+myTuple = [5, "teste", ["a", "b"]];
+// myTuple = [true, false, true};
