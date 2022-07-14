@@ -79,20 +79,20 @@ teste = null;
 // funções
 function sum(a: number, b:number) {
     return a + b;
-};
+}
 console.log(sum(12, 12));
 // console.log(sum("12", true));
 function sayHelloTo(name: string): string {
     return `Hello ${name}!`;
-};
+}
 console.log(sayHelloTo("Alessandra"));
 function logger(msg: string): void { // void -> quando a função não retorna nada
     console.log(msg);
-};
+}
 logger("teste");
 function greeting1(name: string, greet?: string) { // ? -> torna o parâmetro opcional
     console.log(`Olá ${greet} ${name}`);
-};
+}
 greeting1("Alessandra"); // Olá undefined Alessandra
 // tratando a função
 function greeting2(name: string, greet?: string): void {
@@ -101,6 +101,24 @@ function greeting2(name: string, greet?: string): void {
         return;
     }
     console.log(`Olá ${name}`);
-};
+}
 greeting2("Alessandra"); // Olá Alessandra
 greeting2("Alessandra", "senhora"); // Olá senhora Alessandra
+
+// interfaces
+interface MathFunctionParams {
+    n1: number,
+    n2: number
+}
+function sumNumbers(nums: MathFunctionParams) {
+    return nums.n1 + nums.n2;
+}
+console.log(sumNumbers({n1: 1, n2: 2}));
+function multiplyNumbers(nums: MathFunctionParams) {
+    return nums.n1 * nums.n2;
+}
+const someNumbers: MathFunctionParams = {
+    n1: 5,
+    n2: 10
+};
+console.log(multiplyNumbers(someNumbers));
