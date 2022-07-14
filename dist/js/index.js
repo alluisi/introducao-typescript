@@ -101,3 +101,24 @@ const a1 = [1, 2, 3];
 const a2 = ["a", "b", "c"];
 showArraysItems(a1);
 showArraysItems(a2);
+class User {
+    constructor(name, role, isApproved) {
+        this.name = name;
+        this.role = role;
+        this.isApproved = isApproved;
+    }
+    showUserName() {
+        console.log(`O nome do usuário é ${this.name}`);
+    }
+    showUserRole(canShow) {
+        if (canShow) {
+            console.log(`A função do usuário é ${this.role}`);
+            return;
+        }
+        console.log("Informação restrita");
+    }
+}
+const ale = new User("Ale", "Admin", true);
+console.log(ale);
+ale.showUserName();
+ale.showUserRole(false);
