@@ -45,3 +45,17 @@ id = 200;
 const userId = 10;
 const productId = "00001";
 const shirId = 123;
+// enum
+// tamanho de roupas (size: Médio, size: Pequeno)
+var Size;
+(function (Size) {
+    Size["P"] = "Pequeno";
+    Size["M"] = "M\u00E9dio";
+    Size["G"] = "Grande";
+})(Size || (Size = {}));
+;
+const camisa = {
+    name: "Camisa gola V",
+    size: Size.G
+};
+console.log(camisa);

@@ -56,3 +56,16 @@ type myIdType = number | string;
 const userId: myIdType = 10;
 const productId: myIdType = "00001";
 const shirId: myIdType = 123;
+
+// enum
+// tamanho de roupas (size: Médio, size: Pequeno)
+enum Size {
+    P = "Pequeno",
+    M = "Médio",
+    G = "Grande"
+};
+const camisa = {
+    name: "Camisa gola V",
+    size: Size.G
+};
+console.log(camisa);
