@@ -134,3 +134,14 @@ function doSomething(info: number | boolean) {
 }
 doSomething(5);
 doSomething(true);
+
+// generics
+function showArraysItems<T>(arr: T[]) {
+    arr.forEach((item) => {
+        console.log(`ITEM: ${item}`);
+    })
+}
+const a1 = [1, 2, 3];
+const a2 = ["a", "b", "c"];
+showArraysItems(a1);
+showArraysItems(a2);

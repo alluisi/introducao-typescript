@@ -92,3 +92,12 @@ function doSomething(info) {
 }
 doSomething(5);
 doSomething(true);
+function showArraysItems(arr) {
+    arr.forEach((item) => {
+        console.log(`ITEM: ${item}`);
+    });
+}
+const a1 = [1, 2, 3];
+const a2 = ["a", "b", "c"];
+showArraysItems(a1);
+showArraysItems(a2);
