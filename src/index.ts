@@ -195,3 +195,16 @@ class Car implements IVehicle {
 }
 const fusca = new Car("VW", 4);
 fusca.showBrand();
+
+// herança
+class SuperCar extends Car {
+    engine
+
+    constructor(brand: string, wheels: number, engine: number) {
+        super(brand, wheels)
+        this.engine = engine
+    }
+}
+const a4 = new SuperCar("Audi", 4, 2.0);
+console.log(a4);
+a4.showBrand();

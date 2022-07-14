@@ -133,3 +133,12 @@ class Car {
 }
 const fusca = new Car("VW", 4);
 fusca.showBrand();
+class SuperCar extends Car {
+    constructor(brand, wheels, engine) {
+        super(brand, wheels);
+        this.engine = engine;
+    }
+}
+const a4 = new SuperCar("Audi", 4, 2.0);
+console.log(a4);
+a4.showBrand();
