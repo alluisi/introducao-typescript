@@ -148,14 +148,14 @@ showArraysItems(a2);
 
 // classes
 class User {
-    name
-    role
-    isApproved
+    name;
+    role;
+    isApproved;
 
     constructor(name: string, role: string, isApproved: boolean) {
-        this.name = name
-        this.role = role
-        this.isApproved = isApproved
+        this.name = name;
+        this.role = role;
+        this.isApproved = isApproved;
     }
 
     showUserName() {
@@ -181,12 +181,12 @@ interface IVehicle {
     showBrand(): void
 }
 class Car implements IVehicle {
-    brand
-    wheels
+    brand;
+    wheels;
 
     constructor(brand: string, wheels: number) {
-        this.brand = brand
-        this.wheels = wheels
+        this.brand = brand;
+        this.wheels = wheels;
     }
 
     showBrand(): void {
@@ -198,13 +198,33 @@ fusca.showBrand();
 
 // herança
 class SuperCar extends Car {
-    engine
+    engine;
 
     constructor(brand: string, wheels: number, engine: number) {
-        super(brand, wheels)
-        this.engine = engine
+        super(brand, wheels);
+        this.engine = engine;
     }
 }
 const a4 = new SuperCar("Audi", 4, 2.0);
 console.log(a4);
 a4.showBrand();
+
+// decorators
+function BaseParamters() { // constructor decorator
+    return function <T extends{new (...args: any[]): {}}>(constructor: T) {
+        return class extends constructor {
+            id = Math.random();
+            createdAt = new Date();
+        };
+    };
+}
+@BaseParamters()
+class Person {
+    name;
+
+    constructor(name: string) {
+        this.name = name;
+    }
+}
+const line = new Person("Line");
+console.log(line);
