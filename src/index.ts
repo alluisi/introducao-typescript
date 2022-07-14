@@ -122,3 +122,15 @@ const someNumbers: MathFunctionParams = {
     n2: 10
 };
 console.log(multiplyNumbers(someNumbers));
+
+// narrowing
+// checagem de tipo
+function doSomething(info: number | boolean) {
+    if (typeof info === "number") {
+        console.log(`O número é ${info}`);
+        return;
+    }
+    console.log("Não foi passado um número");
+}
+doSomething(5);
+doSomething(true);

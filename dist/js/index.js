@@ -83,3 +83,12 @@ const someNumbers = {
     n2: 10
 };
 console.log(multiplyNumbers(someNumbers));
+function doSomething(info) {
+    if (typeof info === "number") {
+        console.log(`O número é ${info}`);
+        return;
+    }
+    console.log("Não foi passado um número");
+}
+doSomething(5);
+doSomething(true);
