@@ -75,3 +75,32 @@ let teste: "algum valor" | null;
 // teste = "outro valor";
 teste = "algum valor";
 teste = null;
+
+// funções
+function sum(a: number, b:number) {
+    return a + b;
+};
+console.log(sum(12, 12));
+// console.log(sum("12", true));
+function sayHelloTo(name: string): string {
+    return `Hello ${name}!`;
+};
+console.log(sayHelloTo("Alessandra"));
+function logger(msg: string): void { // void -> quando a função não retorna nada
+    console.log(msg);
+};
+logger("teste");
+function greeting1(name: string, greet?: string) { // ? -> torna o parâmetro opcional
+    console.log(`Olá ${greet} ${name}`);
+};
+greeting1("Alessandra"); // Olá undefined Alessandra
+// tratando a função
+function greeting2(name: string, greet?: string): void {
+    if (greet) {
+        console.log(`Olá ${greet} ${name}`);
+        return;
+    }
+    console.log(`Olá ${name}`);
+};
+greeting2("Alessandra"); // Olá Alessandra
+greeting2("Alessandra", "senhora"); // Olá senhora Alessandra
