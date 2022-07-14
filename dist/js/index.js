@@ -59,3 +59,8 @@ const camisa = {
     size: Size.G
 };
 console.log(camisa);
+// literal types
+let teste;
+// teste = "outro valor";
+teste = "algum valor";
+teste = null;
