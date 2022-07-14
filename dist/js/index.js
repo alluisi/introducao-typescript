@@ -122,3 +122,14 @@ const ale = new User("Ale", "Admin", true);
 console.log(ale);
 ale.showUserName();
 ale.showUserRole(false);
+class Car {
+    constructor(brand, wheels) {
+        this.brand = brand;
+        this.wheels = wheels;
+    }
+    showBrand() {
+        console.log(`A marca do carro é ${this.brand}`);
+    }
+}
+const fusca = new Car("VW", 4);
+fusca.showBrand();
